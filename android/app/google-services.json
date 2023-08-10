@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "936124374565",
+    "project_id": "ideagram-d6a62",
+    "storage_bucket": "ideagram-d6a62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936124374565:android:ccbd15d89e10d9ce1769cc",
+        "android_client_info": {
+          "package_name": "com.example.idea_gram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936124374565-5ivcb13ns7jjpefk6dov63f6lpblmin2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEEVUdC4X22aT0XUC1wJVqoTEm6KoC7Lc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936124374565-5ivcb13ns7jjpefk6dov63f6lpblmin2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "936124374565-k0cf8nva8f3laoels2bgan6g0fp44tmu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ideaGram"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
