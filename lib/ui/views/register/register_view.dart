@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:idea_gram/ui/common/app_colors.dart';
 import 'package:idea_gram/ui/common/app_strings.dart';
 import 'package:idea_gram/ui/common/ui_helpers.dart';
+import 'package:idea_gram/ui/widgets/common/register_fields/register_fields.dart';
 import 'package:stacked/stacked.dart';
 
 import 'register_viewmodel.dart';
@@ -19,7 +20,6 @@ class RegisterView extends StackedView<RegisterViewModel> {
       backgroundColor: kcVeryLightGrey,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        
         children: <Widget>[
           Container(
             alignment: Alignment.center,
@@ -45,6 +45,7 @@ class RegisterView extends StackedView<RegisterViewModel> {
             ),
           ),
           verticalSpaceMedium,
+          const RegisterFields(),
         ],
       ),
     );

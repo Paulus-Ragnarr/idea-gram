@@ -3,3 +3,7 @@ const String ksHomeBottomSheetDescription =
     'Stacked is built to help you build better apps. Give us a chance and we\'ll prove it to you. Check out stacked.filledstacks.com to learn more';
 const String appTitle = 'IdeaGram';
 const String regTitle = 'Register';
+const String hintName = 'Full Name';
+const String hintEmail = 'Email';
+const String hintPass = 'Password';
+
