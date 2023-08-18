@@ -3,6 +3,7 @@ import 'package:idea_gram/ui/common/app_colors.dart';
 import 'package:idea_gram/ui/common/app_strings.dart';
 import 'package:idea_gram/ui/common/ui_helpers.dart';
 import 'package:idea_gram/ui/widgets/common/app_button/app_button.dart';
+import 'package:idea_gram/ui/widgets/common/platform_buttons/platform_buttons.dart';
 import 'package:idea_gram/ui/widgets/common/register_fields/register_fields.dart';
 import 'package:stacked/stacked.dart';
 
@@ -51,7 +52,38 @@ class RegisterView extends StackedView<RegisterViewModel> {
           const AppButton(
             backgroundColor: kcPrimaryColorDark,
             foregroundColor: kcWhiteColor,
-          )
+            text: regSubmit,
+          ),
+          verticalSpaceMedium,
+          Container(
+            alignment: Alignment.center,
+            child: const Text(
+              platformMess,
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+          ),
+          verticalSpaceMedium,
+          const PlatformButtons(),
+          verticalSpaceMedium,
+          Container(
+            alignment: Alignment.center,
+            child: const Text(
+              loginMessage,
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+          ),
+           verticalSpaceMedium,
+          const AppButton(
+            backgroundColor: kcDarkGreyColor,
+            foregroundColor: kcWhiteColor,
+            text: loginSubmit,
+          ),
         ],
       ),
     );

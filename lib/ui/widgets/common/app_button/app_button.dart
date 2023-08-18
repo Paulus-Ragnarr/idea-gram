@@ -14,8 +14,10 @@ class AppButton extends StackedView<AppButtonModel> {
     this.onPressed,
     this.backgroundColor,
     this.foregroundColor,
+    required this.text,
   });
 
+  final String text;
   @override
   Widget builder(
     BuildContext context,
@@ -28,10 +30,11 @@ class AppButton extends StackedView<AppButtonModel> {
         backgroundColor: MaterialStatePropertyAll(backgroundColor),
         foregroundColor: MaterialStatePropertyAll(foregroundColor),
         fixedSize: const MaterialStatePropertyAll(Size(350, 48)),
-        side: const MaterialStatePropertyAll(BorderSide(color: Colors.black, width: 1)),
+        side: const MaterialStatePropertyAll(
+            BorderSide(color: Colors.black, width: 1)),
       ),
-      child: const Text(
-        submit,
+      child: Text(
+        text,
       ),
     );
   }

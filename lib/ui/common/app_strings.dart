@@ -6,4 +6,8 @@ const String regTitle = 'Register';
 const String hintName = 'Full Name';
 const String hintEmail = 'Email';
 const String hintPass = 'Password';
-const String submit = 'Submit';
+const String regSubmit = 'Register';
+const String platformMess = 'or';
+const String loginMessage = 'Already have an account?';
+const String loginSubmit = 'Login';
+
