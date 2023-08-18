@@ -5,6 +5,7 @@ import 'package:idea_gram/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:idea_gram/ui/views/register/register_view.dart';
+import 'package:idea_gram/services/firebase_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -18,7 +19,8 @@ import 'package:idea_gram/ui/views/register/register_view.dart';
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
-    // @stacked-service
+    LazySingleton(classType: FirebaseService),
+// @stacked-service
   ],
   bottomsheets: [
     StackedBottomsheet(classType: NoticeSheet),

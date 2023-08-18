@@ -10,4 +10,3 @@ const String regSubmit = 'Register';
 const String platformMess = 'or';
 const String loginMessage = 'Already have an account?';
 const String loginSubmit = 'Login';
-

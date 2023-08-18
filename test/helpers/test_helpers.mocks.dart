@@ -7,6 +7,7 @@ import 'dart:async' as _i4;
 import 'dart:ui' as _i5;
 
 import 'package:flutter/material.dart' as _i3;
+import 'package:idea_gram/services/firebase_service.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i2;
 
@@ -627,3 +628,8 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
         returnValueForMissingStub: null,
       );
 }
+
+/// A class which mocks [FirebaseService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockFirebaseService extends _i1.Mock implements _i6.FirebaseService {}

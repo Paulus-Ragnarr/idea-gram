@@ -25,7 +25,7 @@ class PlatformButtons extends StackedView<PlatformButtonsModel> {
           height: 48,
         ),
         verticalSpaceSmall,
-         SocialLoginButton(
+        SocialLoginButton(
           buttonType: SocialLoginButtonType.google,
           onPressed: () {},
           width: 350,
