@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '936124374565',
     projectId: 'ideagram-d6a62',
     storageBucket: 'ideagram-d6a62.appspot.com',
-    iosClientId: '936124374565-k0cf8nva8f3laoels2bgan6g0fp44tmu.apps.googleusercontent.com',
+    iosClientId:
+        '936124374565-k0cf8nva8f3laoels2bgan6g0fp44tmu.apps.googleusercontent.com',
     iosBundleId: 'com.example.ideaGram',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '936124374565',
     projectId: 'ideagram-d6a62',
     storageBucket: 'ideagram-d6a62.appspot.com',
-    iosClientId: '936124374565-bjh1uq66v6jgu1ahie3h6ogrs4u78gk6.apps.googleusercontent.com',
+    iosClientId:
+        '936124374565-bjh1uq66v6jgu1ahie3h6ogrs4u78gk6.apps.googleusercontent.com',
     iosBundleId: 'com.example.ideaGram.RunnerTests',
   );
 }

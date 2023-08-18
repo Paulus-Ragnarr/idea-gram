@@ -23,7 +23,10 @@ class StartupView extends StackedView<StartupViewModel> {
           children: [
             Text(
               appTitle,
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900, color: kcPrimaryColor),
+              style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                  color: kcPrimaryColor),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
