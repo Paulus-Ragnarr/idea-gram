@@ -2,14 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:idea_gram/ui/common/app_colors.dart';
 import 'package:idea_gram/ui/common/app_strings.dart';
 import 'package:idea_gram/ui/common/ui_helpers.dart';
+import 'package:idea_gram/ui/views/register/register_view.form.dart';
 import 'package:idea_gram/ui/widgets/common/app_button/app_button.dart';
 import 'package:idea_gram/ui/widgets/common/platform_buttons/platform_buttons.dart';
 import 'package:idea_gram/ui/widgets/common/register_fields/register_fields.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked/stacked_annotations.dart';
 
 import 'register_viewmodel.dart';
 
-class RegisterView extends StackedView<RegisterViewModel> {
+@FormView(fields: [
+  FormTextField(name: 'name'),
+  FormTextField(name: 'email'),
+  FormTextField(name: 'password'),
+])
+class RegisterView extends StackedView<RegisterViewModel> with $RegisterView {
   const RegisterView({Key? key}) : super(key: key);
 
   @override
@@ -47,7 +54,11 @@ class RegisterView extends StackedView<RegisterViewModel> {
             ),
           ),
           verticalSpaceMedium,
-          const RegisterFields(),
+          RegisterFields(
+            nameController: nameController,
+            emailController: emailController,
+            passwordController: passwordController,
+          ),
           verticalSpaceMedium,
           const AppButton(
             backgroundColor: kcPrimaryColorDark,
@@ -78,7 +89,7 @@ class RegisterView extends StackedView<RegisterViewModel> {
               ),
             ),
           ),
-           verticalSpaceMedium,
+          verticalSpaceMedium,
           const AppButton(
             backgroundColor: kcDarkGreyColor,
             foregroundColor: kcWhiteColor,
@@ -87,6 +98,12 @@ class RegisterView extends StackedView<RegisterViewModel> {
         ],
       ),
     );
+  }
+
+  @override
+  void onDispose(RegisterViewModel viewModel) {
+    super.onDispose(viewModel);
+    disposeForm();
   }
 
   @override
