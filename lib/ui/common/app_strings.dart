@@ -6,4 +6,4 @@ const String regTitle = 'Register';
 const String hintName = 'Full Name';
 const String hintEmail = 'Email';
 const String hintPass = 'Password';
-
+const String submit = 'Submit';

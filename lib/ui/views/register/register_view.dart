@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:idea_gram/ui/common/app_colors.dart';
 import 'package:idea_gram/ui/common/app_strings.dart';
 import 'package:idea_gram/ui/common/ui_helpers.dart';
+import 'package:idea_gram/ui/widgets/common/app_button/app_button.dart';
 import 'package:idea_gram/ui/widgets/common/register_fields/register_fields.dart';
 import 'package:stacked/stacked.dart';
 
@@ -46,6 +47,11 @@ class RegisterView extends StackedView<RegisterViewModel> {
           ),
           verticalSpaceMedium,
           const RegisterFields(),
+          verticalSpaceMedium,
+          const AppButton(
+            backgroundColor: kcPrimaryColorDark,
+            foregroundColor: kcWhiteColor,
+          )
         ],
       ),
     );
