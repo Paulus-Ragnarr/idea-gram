@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:idea_gram/ui/common/app_colors.dart';
+import 'package:idea_gram/ui/common/app_strings.dart';
 import 'package:stacked/stacked.dart';
 import 'package:idea_gram/ui/common/ui_helpers.dart';
 
@@ -20,8 +22,8 @@ class StartupView extends StackedView<StartupViewModel> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'STACKED',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900),
+              appTitle,
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900, color: kcPrimaryColor),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
