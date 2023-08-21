@@ -6,15 +6,15 @@ import 'package:stacked/stacked.dart';
 import 'register_fields_model.dart';
 
 class RegisterFields extends StackedView<RegisterFieldsModel> {
-  final TextEditingController? nameController;
-  final TextEditingController? emailController;
-  final TextEditingController? passwordController;
+  final TextEditingController nameController;
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
 
   const RegisterFields({
     super.key,
-    this.emailController,
-    this.nameController,
-    this.passwordController,
+    required this.emailController,
+    required this.nameController,
+    required this.passwordController,
   });
 
   @override

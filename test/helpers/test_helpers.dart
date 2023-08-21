@@ -1,8 +1,9 @@
+import 'package:idea_gram/services/authentication/firebase_service.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:idea_gram/app/app.locator.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:idea_gram/services/firebase_service.dart';
+
 // @stacked-import
 
 import 'test_helpers.mocks.dart';

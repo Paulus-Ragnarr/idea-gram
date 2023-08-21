@@ -8,7 +8,6 @@ import 'package:idea_gram/ui/widgets/common/platform_buttons/platform_buttons.da
 import 'package:idea_gram/ui/widgets/common/register_fields/register_fields.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked/stacked_annotations.dart';
-
 import 'register_viewmodel.dart';
 
 @FormView(fields: [
@@ -27,77 +26,87 @@ class RegisterView extends StackedView<RegisterViewModel> with $RegisterView {
   ) {
     return Scaffold(
       backgroundColor: kcVeryLightGrey,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            alignment: Alignment.center,
-            child: const SafeArea(
-              child: Text(
-                appTitle,
+      body: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              alignment: Alignment.center,
+              child: const SafeArea(
+                child: Text(
+                  appTitle,
+                  style: TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.w900,
+                      color: kcPrimaryColor),
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(45, 0, 0, 0),
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                regTitle,
                 style: TextStyle(
-                    fontSize: 35,
-                    fontWeight: FontWeight.w900,
-                    color: kcPrimaryColor),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(45, 0, 0, 0),
-            alignment: Alignment.centerLeft,
-            child: const Text(
-              regTitle,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
+            verticalSpaceMedium,
+            RegisterFields(
+              nameController: nameController,
+              emailController: emailController,
+              passwordController: passwordController,
+            ),
+            verticalSpaceMedium,
+            AppButton(
+              onPressed: viewModel.onRegPressed,
+              backgroundColor: kcPrimaryColorDark,
+              foregroundColor: kcWhiteColor,
+              text: regSubmit,
+            ),
+            verticalSpaceMedium,
+            Container(
+              alignment: Alignment.center,
+              child: const Text(
+                platformMess,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ),
-          ),
-          verticalSpaceMedium,
-          RegisterFields(
-            nameController: nameController,
-            emailController: emailController,
-            passwordController: passwordController,
-          ),
-          verticalSpaceMedium,
-          const AppButton(
-            backgroundColor: kcPrimaryColorDark,
-            foregroundColor: kcWhiteColor,
-            text: regSubmit,
-          ),
-          verticalSpaceMedium,
-          Container(
-            alignment: Alignment.center,
-            child: const Text(
-              platformMess,
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w300,
+            verticalSpaceMedium,
+            const PlatformButtons(),
+            verticalSpaceMedium,
+            Container(
+              alignment: Alignment.center,
+              child: const Text(
+                loginMessage,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ),
-          ),
-          verticalSpaceMedium,
-          const PlatformButtons(),
-          verticalSpaceMedium,
-          Container(
-            alignment: Alignment.center,
-            child: const Text(
-              loginMessage,
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w300,
-              ),
+            verticalSpaceMedium,
+            const AppButton(
+              backgroundColor: kcDarkGreyColor,
+              foregroundColor: kcWhiteColor,
+              text: loginSubmit,
             ),
-          ),
-          verticalSpaceMedium,
-          const AppButton(
-            backgroundColor: kcDarkGreyColor,
-            foregroundColor: kcWhiteColor,
-            text: loginSubmit,
-          ),
-        ],
+          ],
+        ),
       ),
     );
+  }
+
+  @override
+  void onViewModelReady(RegisterViewModel viewModel) {
+    super.onViewModelReady(viewModel);
+    syncFormWithViewModel(viewModel);
   }
 
   @override
